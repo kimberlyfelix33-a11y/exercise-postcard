@@ -1,0 +1,51 @@
+body {
+	background: black;
+}
+* {
+	border: 1px dashed red;
+	min-height: 10px;
+}
+.postcard {
+	background: white;
+	width: 400px;
+	height: 300px;
+	margin: auto;
+}
+/* 1. Esto pone el título y la imagen uno al lado del otro */
+.postcard-header {
+	display: flex;
+}
+
+/* 2. Esto achica el logo para que no sea gigante */
+.postcard-header img {
+	width: 50px;
+	height: 50px;
+}
+
+/* 3. Esto empuja la imagen a la derecha y quita espacio extra */
+.postcard-header h1 {
+	width: 100%;
+	margin: 0;
+}
+.postcard-body {
+	display: flex;
+}
+/* Quita el margen superior al primer párrafo de la izquierda */
+.body-left p:first-child {
+	margin-top: 0;
+}
+
+/* Agrega espacio interno para que el texto no toque los bordes rojos */
+.body-left,
+.body-right {
+	padding: 10px;
+}
+
+/* Estilo para los inputs: solo una línea gris abajo */
+input {
+	border: none;
+	border-bottom: 1px solid grey;
+	display: block; /* Esto hace que se pongan uno abajo del otro */
+	margin-bottom: 10px;
+	width: 100%; /* Para que ocupen todo el ancho de su columna */
+}
